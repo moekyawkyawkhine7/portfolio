@@ -5,6 +5,8 @@ import './Header.scss';
 import { motion } from 'framer-motion';
 // constant images
 import { images } from '../../constants';
+// HOC
+import { AppWrap } from '../../wrapper';
 
 // If you wannt to use this kind of property in multiple places, you can use variant that give you a better solution for it.
 // After declaration of variants, you can use this variant property in everywhere.
@@ -72,4 +74,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default AppWrap(Header, "home")

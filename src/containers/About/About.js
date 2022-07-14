@@ -1,34 +1,37 @@
-import React, { useState } from 'react'
+import React from 'react'
 // scss
 import './About.scss';
 // lib
 import { motion } from 'framer-motion';
 // constants
-import { images} from '../../constants';
+import { images } from '../../constants';
+// HOC
+import { AppWrap } from '../../wrapper';
+
+const abouts = [
+  {
+    title: "Wed Development",
+    imgUrl: images.about01,
+    description: "I am a good developer."
+  },
+  {
+    title: "Frontend Development",
+    imgUrl: images.about02,
+    description: "I am a good developer."
+  },
+  {
+    title: "Backend Development",
+    imgUrl: images.about03,
+    description: "I am a good developer."
+  },
+  {
+    title: "MERN Stack",
+    imgUrl: images.about04,
+    description: "I am a good developer."
+  }
+];
 
 const About = () => {
-  const [abouts, setAbouts] = useState([
-    {
-      title: "Wed Development", 
-      imgUrl: images.about01,
-      description: "I am a good developer."
-    },
-    {
-      title: "Frontend Development", 
-      imgUrl: images.about02,
-      description: "I am a good developer."
-    },
-    {
-      title: "Backend Development", 
-      imgUrl: images.about03,
-      description: "I am a good developer."
-    },
-    {
-      title: "MERN Stack", 
-      imgUrl: images.about04,
-      description: "I am a good developer."
-    }
-  ])
   return (
     <>
       <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
@@ -51,4 +54,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrap(About, "about")

@@ -11,11 +11,11 @@ const App = () => {
     <div className="app">
       <NavBar />
       <Header />
-      <About />
+      <About /> {/** white bg */}
       <Work />
-      <Skills />
+      <Skills /> {/** white bg */}
       <Testimonial />
-      <Footer />
+      <Footer /> {/** white bg */}
     </div>
   )
 }

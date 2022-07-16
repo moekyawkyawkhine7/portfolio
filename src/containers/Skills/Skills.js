@@ -44,7 +44,7 @@ const Skills = () => {
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
-                  <>
+                  <React.Fragment key={`exp-${work.name}`}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ const Skills = () => {
                     >
                       {work.description}
                     </ReactTooltip>
-                  </>
+                  </React.Fragment>
                 ))}
               </motion.div>
             </motion.div>
@@ -75,4 +75,4 @@ const Skills = () => {
   )
 }
 
-export default AppWrap(MotionWrap(Skills, "app__skills"), "skills")
+export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app__whitebg")
